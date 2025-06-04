@@ -2,6 +2,8 @@ pipeline {
 	agent any
 	tools {
 		maven 'Maven'
+		gradle 'Gradle'
+		jdk 'JDK'
 	}
 	stages {
 		stage('Checkout') {	
