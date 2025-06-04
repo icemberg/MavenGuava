@@ -1,5 +1,5 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
+# Gradle
+# Build your Java project and run tests with Apache Gradle.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
@@ -10,12 +10,12 @@ pool:
   name: Default
 
 steps:
-  - script: echo "My Azure Pipeline for Maven project"
+  - script: echo "My Azure Pipeline for Gradle project"
     displayName: 'Run a one-line script'
 
-  - script: mvn clean install
-    displayName: 'Build with Maven'
+  - script: gradle build
+    displayName: 'Build with Gradle'
 
-  - script: mvn exec:java -Dexec.mainClass='com.example.App'
+  - script: gradle run
     displayName: 'Run the JAR file'
 
