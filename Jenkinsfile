@@ -26,6 +26,7 @@ pipeline {
 		stage('Run Application') {
 			steps {
 				sh 'gradle run'
+				sh 'java -jar build/libs/MavenGuava-1.0-SNAPSHOT-all.jar'
 				sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
 			}
 		}
