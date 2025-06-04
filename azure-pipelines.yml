@@ -16,6 +16,6 @@ steps:
   - script: mvn clean install
     displayName: 'Build with Maven'
 
-  - script: java -jar target/MavenGuava-1.0-SNAPSHOT.jar
+  - script: mvn exec:java -Dexec.mainClass='com.example.App'
     displayName: 'Run the JAR file'
 
